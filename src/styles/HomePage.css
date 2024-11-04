@@ -1,0 +1,100 @@
+/* src/styles/HomePage.css */
+/* HomePage.css */
+.carousel-item img {
+    max-width: 800px; /* Устанавливает максимальную ширину изображения */
+    max-height: 400px; /* Устанавливает максимальную высоту изображения */
+    margin: 0 auto; /* Центрирует изображение */
+}
+
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* HomePage.css */
+/* .custom-carousel {
+    max-width: 800px;
+    max-height: 400px;
+    margin: 0 auto;
+} */
+
+@media (max-width: 768px) {
+    .custom-carousel {
+        max-width: 100%; /* На мобильных устройствах карусель будет занимать 100% ширины */
+        max-height: 250px; /* Меньшая высота для мобильных */
+    }
+}
+/* HomePage.css */
+.custom-carousel {
+    max-width: 900px; 
+    max-height: 400px; /* Ограничение высоты */
+    margin: 20px auto; /* Центрирование и добавление отступа сверху */
+    border-radius: 15px; /* Округленные края */
+    overflow: hidden; /* Чтобы изображение не выходило за рамки */
+}
+
+/* Касается каждого изображения внутри карусели */
+.carousel-item img {
+    border-radius: 15px; /* Округленные края для каждого изображения */
+}
+.button-container {
+    display: flex; /* Для размещения кнопок в ряд */
+    flex-wrap: wrap; /* Чтобы кнопки переходили на новую строку, если не помещаются */
+    justify-content: center; /* Центрируем кнопки */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.custom-button {
+    background-color: #A98604; /* Цвет кнопки */
+    border: none; /* Убираем границы */
+    border-radius: 5px; /* Округленные края кнопки */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Внутренние отступы */
+    margin: 10px; /* Отступы между кнопками */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+}
+
+.custom-button:hover {
+    background-color: #A98604; /* Цвет при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.custom-button {
+    display: flex; /* Добавлено для выравнивания текста и иконок */
+    align-items: center; /* Выравнивание по вертикали */
+    background-color: #A98604;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.custom-button:hover {
+    background-color:#A98604;
+    transform: scale(1.05);
+}
+
+.custom-button svg {
+    margin-right: 8px; /* Отступ между иконкой и текстом */
+    font-size: 1.2em; /* Размер иконок */
+}
