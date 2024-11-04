@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage'; // Страница "О нас"
 import OriginalPartsPage from './pages/OriginalPartsPage'; // Страница "Оригинальные запчасти"
 import BulbsPage from './pages/BulbsPage'; // Страница "Лампочки"
 import BatteriesPage from './pages/BatteriesPage'; // Страница "Аккумуляторы"
+import Admin from './pages/Admin.js'; 
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Route path="/original-parts" element={<OriginalPartsPage />} />
                 <Route path="/bulbs" element={<BulbsPage />} />
                 <Route path="/batteries" element={<BatteriesPage />} />
+                <Route path="/admin" element={<Admin />} /> 
                 {/* Добавь другие маршруты для страниц товаров, контактов и т.д. */}
             </Routes>
         </Router>

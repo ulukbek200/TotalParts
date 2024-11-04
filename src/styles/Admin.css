@@ -1,0 +1,215 @@
+/* Сброс всех стандартных отступов и добавление box-sizing */ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+/* Основные стили для заголовка административной панели */ 
+.adminName { 
+    margin-left: 100px; 
+} 
+ 
+/* Стили для поля поиска */ 
+.search { 
+    width: 555px; 
+    padding: 10px; 
+} 
+ 
+/* Контейнер для ввода данных и кнопки добавления детали */ 
+.introduction { 
+    justify-content: center; 
+    display: flex; 
+    margin-left: 106px; 
+    margin-top: 40px; 
+    width: 1110px; 
+    outline: auto; 
+    outline-color: rgb(99, 92, 92); 
+} 
+ 
+/* Кнопка для добавления новой детали */ 
+.new_title { 
+    padding: 12px 12px; 
+    width: 555px; 
+    background-color: rgb(230, 197, 29); 
+    cursor: pointer; 
+} 
+ 
+/* Эффект наведения для кнопки добавления новой детали */ 
+.new_title:hover { 
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+} 
+ 
+/* Стили для категории продукта (если требуется) */ 
+.category { 
+    width: 370px; 
+    cursor: pointer; 
+} 
+ 
+/* Заголовки статей и полей */ 
+.title_article { 
+    margin-top: 35px; 
+    margin-left: 106px; 
+    font-size: larger; 
+    font-weight: 500; 
+    cursor: default; 
+} 
+ 
+/* Стили для полей ввода */ 
+.name { 
+    display: flex; 
+    margin-left: 106px; 
+    height: 40px; 
+    width: 1110px; 
+    outline: auto; 
+    outline-color: rgb(99, 92, 92); 
+    padding: 15px; 
+} 
+ 
+/* Дополнительные стили для других элементов (можно удалить, если не нужно) */ 
+.one { 
+    display: flex; 
+    margin-left: 106px; 
+    height: 40px; 
+    width: 36px; 
+    outline: auto; 
+    margin-top: 50px; 
+    font-weight: 700; 
+    outline-color: rgb(99, 92, 92); 
+} 
+ 
+/* Стиль для текста рядом с числом */ 
+.num { 
+    margin-top: 8px; 
+    margin-left: 13px; 
+    cursor: default; 
+} 
+ 
+/* Стили для текстовых полей */ 
+.text { 
+    display: flex; 
+    margin-left: 106px; 
+    height: 40px; 
+    width: 1038px; 
+    outline: auto; 
+    margin-top: -40px; 
+    margin-left: 142px; 
+    outline-color: rgb(99, 92, 92); 
+    padding: 15px; 
+} 
+ 
+/* Контейнер для продукта */ 
+.product { 
+    margin-left: 106px; 
+    margin-top: 5px; 
+} 
+ 
+/* Кнопка закрытия (если требуется) */ 
+.close { 
+    display: flex; 
+    margin-left: 1178px; 
+    height: 40px; 
+    width: 36px; 
+    outline: auto; 
+    margin-top: -40px; 
+    outline-color: rgb(230, 197, 29); 
+    cursor: pointer; 
+} 
+ 
+/* Стиль для текста внутри кнопки закрытия */ 
+.close--two { 
+    color: rgb(230, 197, 29); 
+    font-weight: 700; 
+    margin-top: 6px; 
+    margin-left: 6px; 
+} 
+ 
+/* Эффект наведения для кнопки закрытия */ 
+.close:hover { 
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+} 
+ 
+/* Кнопка для вставки изображения */ 
+.trOne { 
+    display: flex; 
+    margin-left: 106px; 
+    margin-top: 1px; 
+    height: 40px; 
+    background-color: rgb(230, 197, 29); 
+    width: 1110px; 
+    outline: auto; 
+    outline-color: rgb(230, 197, 29); 
+    cursor: pointer; 
+} 
+ 
+/* Эффект наведения для кнопки вставки изображения */ 
+.trOne:hover { 
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+} 
+ 
+/* Текст внутри кнопки вставки изображения */ 
+.trOneText { 
+    margin-top: 5px; 
+    margin-left: 15px; 
+} 
+ 
+/* Стили для сообщения об ошибке */ 
+.error { 
+    margin-top: 10px; 
+    color: red; 
+} 
+ 
+/* Контейнер для изображения */ 
+.instImage { 
+    width: 200px; 
+    height: auto; 
+    margin-left: 106px; 
+    margin-top: 5px; 
+} 
+ 
+/* Кнопка для дополнительных действий (например, добавления) */ 
+.tr { 
+    display: flex; 
+    margin-left: 106px; 
+    margin-top: 1px; 
+    height: 40px; 
+    background-color: rgb(230, 197, 29); 
+    width: 1110px; 
+    outline: auto; 
+    border: none; 
+    outline-color: rgb(230, 197, 29); 
+    cursor: pointer; 
+    margin-bottom: 100px; 
+} 
+ 
+/* Эффект наведения для дополнительных кнопок */ 
+.tr:hover { 
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+} 
+ 
+/* Стили для значка плюса (если требуется) */ 
+.plus { 
+    color: black; 
+    margin-top: 9px;
+    margin-left: 555px; 
+    } 
+     
+    /* Заголовок для хештегов (если требуется) */ 
+    .hashtag { 
+        margin-top: 35px; 
+        margin-left: 106px; 
+        font-size: larger; 
+        font-weight: 500; 
+        cursor: default; 
+    } 
+     
+    /* Поля для ввода хештегов */ 
+    .hashtag_input { 
+        display: flex; 
+        margin-left: 106px; 
+        height: 40px; 
+        width: 1110px; 
+        outline: auto; 
+        outline-color: rgb(99, 92, 92); 
+        padding: 15px; 
+    }
