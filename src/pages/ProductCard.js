@@ -1,17 +1,27 @@
+// ProductCard.js
 import React from 'react';
-import '../styles/ProductCard.css'; // Если файл в папке styles
+import { FaShoppingCart, FaStar } from 'react-icons/fa';
+import '../styles/ProductCard.css';
 
-
-const ProductCard = ({ product }) => {
-    return (
-        <div className="product-card">
-            <img src={product.image} alt={product.name} className="product-image" />
-            <h3 className="product-name">{product.name}</h3>
-            <p className="product-description">{product.description}</p>
-            <p className="product-price">{`Цена: ${product.price} сомов`}</p>
-            <button className="add-to-cart">Добавить в корзину</button>
+const ProductCard = ({ image, title, rating, price }) => {
+  return (
+    <div className="product-card">
+      <img src={image} alt={title} className="product-image" />
+      <div className="product-info">
+        <h4>{title}</h4>
+        <div className="product-rating">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} color={i < rating ? '#FFD700' : '#e4e5e9'} />
+          ))}
+          <span className="rating-number">{rating}.0 (51)</span>
         </div>
-    );
+        <p className="product-price">{price} сом</p>
+        <button className="add-to-cart">
+          <FaShoppingCart />
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default ProductCard;

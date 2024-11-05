@@ -98,3 +98,33 @@
     margin-right: 8px; /* Отступ между иконкой и текстом */
     font-size: 1.2em; /* Размер иконок */
 }
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Увеличиваем расстояние между кнопками */
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #A98604; /* Синий цвет кнопки */
+    color: white;
+    border: none;
+    padding: 15px 25px; /* Увеличиваем отступы внутри кнопки */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px; /* Увеличиваем размер шрифта */
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #A98604; /* Цвет при наведении */
+}
+
+.button-container svg {
+    font-size: 24px; /* Увеличиваем размер иконки */
+}

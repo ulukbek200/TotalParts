@@ -1,8 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import { FaCar, FaTools, FaOilCan, FaBatteryHalf, FaLightbulb, FaWrench, FaTachometerAlt, FaCarAlt, FaHeadphones, FaGlassWhiskey, FaLock, FaStar, FaCalendarAlt } from 'react-icons/fa'; // Импортируем иконки
+import { FaCar, FaTools, FaOilCan, FaBatteryHalf, FaLightbulb, FaWrench, FaTachometerAlt, FaCarAlt, FaHeadphones, FaGlassWhiskey, FaLock, FaStar, FaCalendarAlt } from 'react-icons/fa';
 import image1 from '../images/image1.JPG';
 import '../styles/HomePage.css';
+import ProductSection from '../components/ProductSection'; // Импортируем ProductSection
 
 const HomePage = () => {
     return (
@@ -37,6 +38,9 @@ const HomePage = () => {
                 <button className="custom-button"><FaGlassWhiskey /> Поставщикам</button>
                 <button className="custom-button"><FaLock /> Безопасность</button>
             </div>
+
+            {/* Добавляем ProductSection ниже */}
+            <ProductSection />
         </div>
     );
 };
