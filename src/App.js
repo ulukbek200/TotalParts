@@ -9,6 +9,7 @@ import OriginalPartsPage from './pages/OriginalPartsPage';
 import BulbsPage from './pages/BulbsPage';
 import BatteriesPage from './pages/BatteriesPage';
 import Admin from './pages/Admin';
+// import BatteriesPage from './pages/BatteriesPage';
 
 const App = () => {
     return (
