@@ -5,11 +5,22 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для отделения */
   }
   
-  .header-content {
+  /* .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+  } */
+
+  /* styles/Header.css */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  margin-top: 5px; /* Отступ сверху для опускания блока */
+  /* другие стили */
+}
+
   
   .logo-section {
     display: flex;

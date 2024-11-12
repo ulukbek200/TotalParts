@@ -1,24 +1,19 @@
 // src/pages/CatalogPage.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/CatalogPage.css';
-
 
 const categories = [
     'Аккумуляторы', 'Лампочки', 'Датчики', 'Радиаторы', 
-    'Глушители', 'Бамперы', 'Сцепление','Аккумуляторы', 'Лампочки', 'Датчики', 'Радиаторы', 
-    'Глушители', 'Бамперы', 'Сцепление','Сцепление'
+    'Глушители', 'Бамперы', 'Сцепление', 'Амортизаторы',
+    'Аккумуляторы', 'Лампочки', 'Датчики', 'Радиаторы', 
+    'Глушители', 'Бамперы', 'Сцепление', 'Амортизаторы', 'Сцепление', 'Амортизаторы'
 ];
 
 const manufacturers = [
     { letter: 'A', brands: ['ABARTH', 'Alfa Romeo', 'Audi'] },
     { letter: 'B', brands: ['BMW Motorrad', 'BMW', 'Baw', 'Buick'] },
-    { letter: 'F', brands: ['FAW', 'Fiat Professional', 'Fiat', 'Ford'] },
-    { letter: 'f', brands: ['ABARTH', 'Alfa Romeo', 'Audi'] },
-    { letter: 'j', brands: ['BMW Motorrad', 'BMW', 'Baw', 'Buick'] },
-    { letter: 'e', brands: ['FAW', 'Fiat Professional', 'Fiat', 'Ford'] },
-    { letter: 'j', brands: ['BMW Motorrad', 'BMW', 'Baw', 'Buick'] },
-    { letter: 'e', brands: ['FAW', 'Fiat Professional', 'Fiat', 'Ford'] },
-    // Добавьте остальные бренды по аналогии
+    { letter: 'F', brands: ['FAW', 'Fiat Professional', 'Fiat', 'Ford'] }
 ];
 
 const CatalogPage = () => {
@@ -27,9 +22,13 @@ const CatalogPage = () => {
             <h2>Поиск по каталогу:</h2>
             <div className="category-grid">
                 {categories.map((category, index) => (
-                    <div key={index} className="category-item">
+                    <Link 
+                        to={`/catalog/${category.toLowerCase()}`} 
+                        key={index} 
+                        className="category-item"
+                    >
                         {category}
-                    </div>
+                    </Link>
                 ))}
             </div>
 
@@ -40,7 +39,9 @@ const CatalogPage = () => {
                         <h3>{manufacturer.letter}</h3>
                         <ul>
                             {manufacturer.brands.map((brand, brandIndex) => (
-                                <li key={brandIndex}>{brand}</li>
+                                <li key={brandIndex} className="brand-item">
+                                    {brand}
+                                </li>
                             ))}
                         </ul>
                     </div>

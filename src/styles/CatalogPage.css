@@ -1,58 +1,50 @@
-/* src/pages/CatalogPage.css */
-
+/* styles/CatalogPage.css */
 .catalog-page {
     padding: 20px;
 }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 10px;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .category-item {
-    background-color: #f8e9c1;
-    padding: 15px;
+    display: inline-block;
+    padding: 10px;
     text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.category-item:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.05);
 }
 
 .manufacturer-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
 }
 
 .manufacturer-item {
-    background-color: #ffffff;
+    background-color: #fafafa;
     padding: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.manufacturer-item h3 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.manufacturer-item ul {
+.brand-item {
     list-style-type: none;
-    padding: 0;
-    margin-top: 5px;
+    padding: 5px 0;
+    transition: color 0.2s;
 }
 
-.manufacturer-item li {
-    font-size: 16px;
+.brand-item:hover {
     color: #555;
 }
