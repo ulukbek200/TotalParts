@@ -128,3 +128,98 @@
 .button-container svg {
     font-size: 24px; /* Увеличиваем размер иконки */
 }
+
+
+/* Стили для карусели */
+.custom-carousel {
+    margin-bottom: 30px;
+    max-width: 900px;
+    max-height: 400px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    border-radius: 15px;
+}
+
+/* Стили заголовка */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0; /* Убираем промежутки между кнопками */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Стили для кнопок */
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A98604;
+    color: white;
+    font-size: 1.5em; /* Увеличиваем размер шрифта */
+    font-weight: bold;
+    padding: 25px 40px; /* Увеличиваем внутренние отступы */
+    margin: 0; /* Убираем отступы между кнопками */
+    border: none;
+    border-radius: 0; /* Убираем закругление */
+    cursor: pointer;
+    flex-grow: 1; /* Заставляем кнопки занимать доступное пространство */
+    min-width: 200px; /* Фиксированная минимальная ширина для каждой кнопки */
+}
+
+.custom-button:hover {
+    background-color: #8a6e02;
+    transform: scale(1.05);
+}
+
+.custom-button svg {
+    margin-right: 10px;
+    font-size: 1.5em; /* Увеличиваем размер иконок */
+}
+/* Контейнер для кнопок */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Небольшой зазор между кнопками */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Стили для кнопок */
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5f6f58; /* Цвет кнопок */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 30px; /* Увеличенные внутренние отступы */
+    margin: 0; /* Убираем отступы */
+    border: none;
+    border-radius: 8px; /* Слегка округленные края */
+    cursor: pointer;
+    width: 200px; /* Фиксированная ширина кнопки */
+    height: 60px; /* Увеличенная высота кнопок */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #8a6e02; /* Цвет при наведении */
+    transform: scale(1.05);
+}
+
+.custom-button svg {
+    margin-right: 10px;
+    font-size: 1.5em; /* Увеличенный размер иконок */
+}

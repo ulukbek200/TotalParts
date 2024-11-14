@@ -37,6 +37,9 @@ const HomePage = () => {
                 <button className="custom-button"><FaCalendarAlt /> Гарантия</button>
                 <button className="custom-button"><FaGlassWhiskey /> Поставщикам</button>
                 <button className="custom-button"><FaLock /> Безопасность</button>
+                <button className="custom-button"><FaCalendarAlt /> Гарантия</button>
+                <button className="custom-button"><FaGlassWhiskey /> Поставщикам</button>
+                <button className="custom-button"><FaLock /> Безопасность</button>
             </div>
 
             {/* Добавляем ProductSection ниже */}
