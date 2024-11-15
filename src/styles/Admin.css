@@ -152,64 +152,121 @@
     margin-top: 5px; 
     margin-left: 15px; 
 } 
- 
-/* Стили для сообщения об ошибке */ 
-.error { 
-    margin-top: 10px; 
-    color: red; 
-} 
- 
-/* Контейнер для изображения */ 
-.instImage { 
-    width: 200px; 
-    height: auto; 
-    margin-left: 106px; 
-    margin-top: 5px; 
-} 
- 
-/* Кнопка для дополнительных действий (например, добавления) */ 
-.tr { 
-    display: flex; 
-    margin-left: 106px; 
-    margin-top: 1px; 
-    height: 40px; 
-    background-color: rgb(230, 197, 29); 
-    width: 1110px; 
-    outline: auto; 
-    border: none; 
-    outline-color: rgb(230, 197, 29); 
-    cursor: pointer; 
-    margin-bottom: 100px; 
-} 
- 
-/* Эффект наведения для дополнительных кнопок */ 
-.tr:hover { 
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
-} 
- 
-/* Стили для значка плюса (если требуется) */ 
-.plus { 
-    color: black; 
+ /* Стили для сообщения об ошибке */
+.error {
+    margin-top: 10px;
+    color: red;
+}
+
+/* Контейнер для изображения */
+.instImage {
+    width: 200px;
+    height: auto;
+    margin-left: 106px;
+    margin-top: 5px;
+}
+
+/* Кнопка для дополнительных действий (например, добавления) */
+.tr {
+    display: flex;
+    margin-left: 106px;
+    margin-top: 1px;
+    height: 40px;
+    background-color: rgb(230, 197, 29);
+    width: 1110px;
+    outline: auto;
+    border: none;
+    outline-color: rgb(230, 197, 29);
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+/* Эффект наведения для дополнительных кнопок */
+.tr:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Стили для значка плюса (если требуется) */
+.plus {
+    color: black;
     margin-top: 9px;
-    margin-left: 555px; 
-    } 
-     
-    /* Заголовок для хештегов (если требуется) */ 
-    .hashtag { 
-        margin-top: 35px; 
-        margin-left: 106px; 
-        font-size: larger; 
-        font-weight: 500; 
-        cursor: default; 
-    } 
-     
-    /* Поля для ввода хештегов */ 
-    .hashtag_input { 
-        display: flex; 
-        margin-left: 106px; 
-        height: 40px; 
-        width: 1110px; 
-        outline: auto; 
-        outline-color: rgb(99, 92, 92); 
-        padding: 15px; 
-    }
+    margin-left: 555px;
+}
+
+/* Заголовок для хештегов (если требуется) */
+.hashtag {
+    margin-top: 35px;
+    margin-left: 106px;
+    font-size: larger;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* Поля для ввода хештегов */
+.hashtag_input {
+    display: flex;
+    margin-left: 106px;
+    height: 40px;
+    width: 1110px;
+    outline: auto;
+    outline-color: rgb(99, 92, 92);
+    padding: 15px;
+}
+
+/* Дополнительные стили для административной панели */
+
+/* Контейнер для панели администратора */
+.admin-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок панели администратора */
+.adminName {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Секция ввода продукта */
+.product-inputs {
+    margin-bottom: 20px;
+}
+
+/* Список продуктов */
+.product-list {
+    margin-top: 30px;
+}
+
+/* Карточка продукта */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-card img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Кнопка добавления продукта */
+.new_title {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.new_title:hover {
+    background-color: #45a049;
+}
