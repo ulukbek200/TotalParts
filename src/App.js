@@ -13,6 +13,7 @@ import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import CatalogPage from './pages/CatalogPage';
 import CategoryPage from './pages/CategoryPage'; // Импортируем CategoryPage
+import ProductDetails from './pages/ProductDetails';
 
 const App = () => {
     return (
@@ -30,6 +31,7 @@ const App = () => {
                     <Route path="/checkout" element={<CheckoutPage />} />
                     <Route path="/catalog" element={<CatalogPage />} />
                     <Route path="/catalog/:category" element={<CategoryPage />} />
+                    <Route path="/product/:productId" element={<ProductDetails />} />
 
                 </Routes>
             </main>
