@@ -1,11 +1,20 @@
-/* src/styles/HomePage.css */
 /* HomePage.css */
-.carousel-item img {
-    max-width: 800px; /* Устанавливает максимальную ширину изображения */
-    max-height: 400px; /* Устанавливает максимальную высоту изображения */
-    margin: 0 auto; /* Центрирует изображение */
+
+/* Карусель */
+.custom-carousel {
+    margin: 20px auto;
+    max-width: 900px;
+    max-height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 0 auto;
+}
 
 .carousel-caption {
     background: rgba(0, 0, 0, 0.6);
@@ -14,203 +23,40 @@
     color: #ffffff;
 }
 
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* HomePage.css */
-/* .custom-carousel {
-    max-width: 800px;
-    max-height: 400px;
-    margin: 0 auto;
-} */
-
-@media (max-width: 768px) {
-    .custom-carousel {
-        max-width: 100%; /* На мобильных устройствах карусель будет занимать 100% ширины */
-        max-height: 250px; /* Меньшая высота для мобильных */
-    }
-}
-/* HomePage.css */
-.custom-carousel {
-    max-width: 900px; 
-    max-height: 400px; /* Ограничение высоты */
-    margin: 20px auto; /* Центрирование и добавление отступа сверху */
-    border-radius: 15px; /* Округленные края */
-    overflow: hidden; /* Чтобы изображение не выходило за рамки */
-}
-
-/* Касается каждого изображения внутри карусели */
-.carousel-item img {
-    border-radius: 15px; /* Округленные края для каждого изображения */
-}
-.button-container {
-    display: flex; /* Для размещения кнопок в ряд */
-    flex-wrap: wrap; /* Чтобы кнопки переходили на новую строку, если не помещаются */
-    justify-content: center; /* Центрируем кнопки */
-    margin-top: 20px; /* Отступ сверху */
-}
-
-.custom-button {
-    background-color: #A98604; /* Цвет кнопки */
-    border: none; /* Убираем границы */
-    border-radius: 5px; /* Округленные края кнопки */
-    color: white; /* Цвет текста */
-    padding: 10px 20px; /* Внутренние отступы */
-    margin: 10px; /* Отступы между кнопками */
-    cursor: pointer; /* Указатель при наведении */
-    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
-}
-
-.custom-button:hover {
-    background-color: #A98604; /* Цвет при наведении */
-    transform: scale(1.05); /* Увеличение кнопки при наведении */
-}
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.custom-button {
-    display: flex; /* Добавлено для выравнивания текста и иконок */
-    align-items: center; /* Выравнивание по вертикали */
-    background-color: #A98604;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.custom-button:hover {
-    background-color:#A98604;
-    transform: scale(1.05);
-}
-
-.custom-button svg {
-    margin-right: 8px; /* Отступ между иконкой и текстом */
-    font-size: 1.2em; /* Размер иконок */
-}
-
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Увеличиваем расстояние между кнопками */
-    margin-top: 20px;
-    justify-content: center;
-}
-
-.custom-button {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #A98604; /* Синий цвет кнопки */
-    color: white;
-    border: none;
-    padding: 15px 25px; /* Увеличиваем отступы внутри кнопки */
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px; /* Увеличиваем размер шрифта */
-    transition: background-color 0.3s ease;
-}
-
-.custom-button:hover {
-    background-color: #A98604; /* Цвет при наведении */
-}
-
-.button-container svg {
-    font-size: 24px; /* Увеличиваем размер иконки */
-}
-
-
-/* Стили для карусели */
-.custom-carousel {
-    margin-bottom: 30px;
-    max-width: 900px;
-    max-height: 400px;
-    margin: 20px auto;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.carousel-item img {
-    border-radius: 15px;
-}
-
-/* Стили заголовка */
+/* Заголовки */
 h2 {
     text-align: center;
     margin: 20px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
 }
 
 /* Контейнер для кнопок */
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 0; /* Убираем промежутки между кнопками */
+    gap: 10px; /* Зазор между кнопками */
     justify-content: center;
     margin-top: 20px;
 }
 
-/* Стили для кнопок */
+/* Кнопки */
 .custom-button {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #A98604;
     color: white;
-    font-size: 1.5em; /* Увеличиваем размер шрифта */
+    font-size: 1.2rem;
     font-weight: bold;
-    padding: 25px 40px; /* Увеличиваем внутренние отступы */
-    margin: 0; /* Убираем отступы между кнопками */
-    border: none;
-    border-radius: 0; /* Убираем закругление */
-    cursor: pointer;
-    flex-grow: 1; /* Заставляем кнопки занимать доступное пространство */
-    min-width: 200px; /* Фиксированная минимальная ширина для каждой кнопки */
-}
-
-.custom-button:hover {
-    background-color: #8a6e02;
-    transform: scale(1.05);
-}
-
-.custom-button svg {
-    margin-right: 10px;
-    font-size: 1.5em; /* Увеличиваем размер иконок */
-}
-/* Контейнер для кнопок */
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px; /* Небольшой зазор между кнопками */
-    justify-content: center;
-    margin-top: 20px;
-}
-
-/* Стили для кнопок */
-.custom-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #5f6f58; /* Цвет кнопок */
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 15px 30px; /* Увеличенные внутренние отступы */
+    padding: 15px 30px;
     margin: 0; /* Убираем отступы */
     border: none;
-    border-radius: 8px; /* Слегка округленные края */
+    border-radius: 8px;
     cursor: pointer;
-    width: 200px; /* Фиксированная ширина кнопки */
-    height: 60px; /* Увеличенная высота кнопок */
+    width: 200px;
+    height: 60px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -221,5 +67,32 @@ h2 {
 
 .custom-button svg {
     margin-right: 10px;
-    font-size: 1.5em; /* Увеличенный размер иконок */
+    font-size: 1.5rem; /* Размер иконок */
+}
+
+/* Продуктовый раздел */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .custom-carousel {
+        max-width: 100%;
+        max-height: 250px;
+    }
+
+    .custom-button {
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem;
+    }
 }

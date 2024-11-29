@@ -4,19 +4,99 @@
     padding: 0; 
     box-sizing: border-box; 
 } 
- 
+
+/* Общие стили для кнопок */
+.button {
+    padding: 12px 20px;
+    background-color: rgb(230, 197, 29);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 /* Основные стили для заголовка административной панели */ 
 .adminName { 
-    margin-left: 100px; 
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
 } 
- 
-/* Стили для поля поиска */ 
-.search { 
-    width: 555px; 
-    padding: 10px; 
+
+/* Контейнер для панели администратора */
+.admin-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Секция ввода продукта */
+.product-inputs {
+    margin-bottom: 20px;
+}
+
+/* Список продуктов */
+.product-list {
+    margin-top: 30px;
+}
+
+/* Карточка продукта */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-card img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Кнопка для добавления новой детали */
+.new_title {
+    width: 555px;
+}
+
+/* Кнопка для вставки изображения */
+.trOne {
+    width: 1110px;
+}
+
+/* Заголовки статей и полей */ 
+.title_article { 
+    margin-top: 35px; 
+    font-size: larger; 
+    font-weight: 500; 
+    cursor: default; 
 } 
- 
-/* Контейнер для ввода данных и кнопки добавления детали */ 
+
+/* Стили для полей ввода */ 
+.name, .text, .hashtag_input { 
+    display: flex; 
+    height: 40px; 
+    width: 1110px; 
+    outline: auto; 
+    outline-color: rgb(99, 92, 92); 
+    padding: 15px; 
+    margin-left: 106px; 
+}
+
+.name, .text { 
+    margin-top: -40px;
+}
+
+.hashtag_input {
+    margin-top: 10px;
+}
+
+/* Контейнер для ввода данных и кнопки добавления детали */
 .introduction { 
     justify-content: center; 
     display: flex; 
@@ -26,84 +106,19 @@
     outline: auto; 
     outline-color: rgb(99, 92, 92); 
 } 
- 
-/* Кнопка для добавления новой детали */ 
+
+/* Кнопка для добавления новой детали */
 .new_title { 
-    padding: 12px 12px; 
-    width: 555px; 
-    background-color: rgb(230, 197, 29); 
-    cursor: pointer; 
-} 
- 
-/* Эффект наведения для кнопки добавления новой детали */ 
-.new_title:hover { 
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
-} 
- 
-/* Стили для категории продукта (если требуется) */ 
-.category { 
-    width: 370px; 
-    cursor: pointer; 
-} 
- 
-/* Заголовки статей и полей */ 
-.title_article { 
-    margin-top: 35px; 
-    margin-left: 106px; 
-    font-size: larger; 
-    font-weight: 500; 
-    cursor: default; 
-} 
- 
-/* Стили для полей ввода */ 
-.name { 
-    display: flex; 
-    margin-left: 106px; 
-    height: 40px; 
-    width: 1110px; 
-    outline: auto; 
-    outline-color: rgb(99, 92, 92); 
-    padding: 15px; 
-} 
- 
-/* Дополнительные стили для других элементов (можно удалить, если не нужно) */ 
-.one { 
-    display: flex; 
-    margin-left: 106px; 
-    height: 40px; 
-    width: 36px; 
-    outline: auto; 
-    margin-top: 50px; 
-    font-weight: 700; 
-    outline-color: rgb(99, 92, 92); 
-} 
- 
-/* Стиль для текста рядом с числом */ 
+    width: 555px;
+}
+
+/* Стили для текста рядом с числом */ 
 .num { 
     margin-top: 8px; 
     margin-left: 13px; 
     cursor: default; 
 } 
- 
-/* Стили для текстовых полей */ 
-.text { 
-    display: flex; 
-    margin-left: 106px; 
-    height: 40px; 
-    width: 1038px; 
-    outline: auto; 
-    margin-top: -40px; 
-    margin-left: 142px; 
-    outline-color: rgb(99, 92, 92); 
-    padding: 15px; 
-} 
- 
-/* Контейнер для продукта */ 
-.product { 
-    margin-left: 106px; 
-    margin-top: 5px; 
-} 
- 
+
 /* Кнопка закрытия (если требуется) */ 
 .close { 
     display: flex; 
@@ -115,7 +130,7 @@
     outline-color: rgb(230, 197, 29); 
     cursor: pointer; 
 } 
- 
+
 /* Стиль для текста внутри кнопки закрытия */ 
 .close--two { 
     color: rgb(230, 197, 29); 
@@ -123,36 +138,13 @@
     margin-top: 6px; 
     margin-left: 6px; 
 } 
- 
+
 /* Эффект наведения для кнопки закрытия */ 
 .close:hover { 
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
 } 
- 
-/* Кнопка для вставки изображения */ 
-.trOne { 
-    display: flex; 
-    margin-left: 106px; 
-    margin-top: 1px; 
-    height: 40px; 
-    background-color: rgb(230, 197, 29); 
-    width: 1110px; 
-    outline: auto; 
-    outline-color: rgb(230, 197, 29); 
-    cursor: pointer; 
-} 
- 
-/* Эффект наведения для кнопки вставки изображения */ 
-.trOne:hover { 
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
-} 
- 
-/* Текст внутри кнопки вставки изображения */ 
-.trOneText { 
-    margin-top: 5px; 
-    margin-left: 15px; 
-} 
- /* Стили для сообщения об ошибке */
+
+/* Стили для сообщения об ошибке */
 .error {
     margin-top: 10px;
     color: red;
@@ -193,16 +185,15 @@
     margin-left: 555px;
 }
 
-/* Заголовок для хештегов (если требуется) */
+/* Заголовок для хештегов */
 .hashtag {
     margin-top: 35px;
-    margin-left: 106px;
     font-size: larger;
     font-weight: 500;
     cursor: default;
 }
 
-/* Поля для ввода хештегов */
+/* Стили для полей ввода хештегов */
 .hashtag_input {
     display: flex;
     margin-left: 106px;
@@ -211,62 +202,62 @@
     outline: auto;
     outline-color: rgb(99, 92, 92);
     padding: 15px;
-}
-
-/* Дополнительные стили для административной панели */
-
-/* Контейнер для панели администратора */
-.admin-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Заголовок панели администратора */
-.adminName {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Секция ввода продукта */
-.product-inputs {
-    margin-bottom: 20px;
-}
-
-/* Список продуктов */
-.product-list {
-    margin-top: 30px;
-}
-
-/* Карточка продукта */
-.product-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.product-card img {
-    max-width: 150px;
-    height: auto;
     margin-top: 10px;
 }
 
-/* Кнопка добавления продукта */
-.new_title {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 10px;
+    }
+
+    .new_title, .trOne, .tr {
+        width: 100%;
+    }
+
+    .product-card {
+        width: 100%;
+    }
 }
 
-.new_title:hover {
-    background-color: #45a049;
+
+/* Пример стилей для Admin.css */
+.adminName {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input, select {
+    margin: 5px 0;
+    padding: 8px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #A98604;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #876504;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 200px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
 }

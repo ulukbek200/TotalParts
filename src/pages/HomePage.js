@@ -1,9 +1,39 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import { FaCar, FaTools, FaOilCan, FaBatteryHalf, FaLightbulb, FaWrench, FaTachometerAlt, FaCarAlt, FaHeadphones, FaGlassWhiskey, FaLock, FaStar, FaCalendarAlt } from 'react-icons/fa';
+import {
+    FaCar,
+    FaTools,
+    FaOilCan,
+    FaBatteryHalf,
+    FaLightbulb,
+    FaWrench,
+    FaTachometerAlt,
+    FaCarAlt,
+    FaHeadphones,
+    FaGlassWhiskey,
+    FaLock,
+    FaStar,
+    FaCalendarAlt,
+} from 'react-icons/fa';
 import image1 from '../images/image1.JPG';
 import '../styles/HomePage.css';
 import ProductSection from '../components/ProductSection'; // Импортируем ProductSection
+
+const services = [
+    { icon: <FaCar />, label: 'Оригинальные запчасти' },
+    { icon: <FaTools />, label: 'Неоригинальные запчасти' },
+    { icon: <FaWrench />, label: 'Запчасти для ТО' },
+    { icon: <FaCarAlt />, label: 'Автомобили' },
+    { icon: <FaLightbulb />, label: 'Автолампы' },
+    { icon: <FaBatteryHalf />, label: 'Аккумуляторы' },
+    { icon: <FaOilCan />, label: 'Автомасла' },
+    { icon: <FaTachometerAlt />, label: 'Диски' },
+    { icon: <FaHeadphones />, label: 'Автохимия' },
+    { icon: <FaStar />, label: 'Автостекла' },
+    { icon: <FaCalendarAlt />, label: 'Гарантия' },
+    { icon: <FaGlassWhiskey />, label: 'Поставщикам' },
+    { icon: <FaLock />, label: 'Безопасность' },
+];
 
 const HomePage = () => {
     return (
@@ -24,22 +54,11 @@ const HomePage = () => {
 
             <h2>Наши услуги</h2>
             <div className="button-container">
-                <button className="custom-button"><FaCar /> Оригинальные запчасти</button>
-                <button className="custom-button"><FaTools /> Неоригинальные запчасти</button>
-                <button className="custom-button"><FaWrench /> Запчасти для ТО</button>
-                <button className="custom-button"><FaCarAlt /> Автомобили</button>
-                <button className="custom-button"><FaLightbulb /> Автолампы</button>
-                <button className="custom-button"><FaBatteryHalf /> Аккумуляторы</button>
-                <button className="custom-button"><FaOilCan /> Автомасла</button>
-                <button className="custom-button"><FaTachometerAlt /> Диски</button>
-                <button className="custom-button"><FaHeadphones /> Автохимия</button>
-                <button className="custom-button"><FaStar /> Автостекла</button>
-                <button className="custom-button"><FaCalendarAlt /> Гарантия</button>
-                <button className="custom-button"><FaGlassWhiskey /> Поставщикам</button>
-                <button className="custom-button"><FaLock /> Безопасность</button>
-                <button className="custom-button"><FaCalendarAlt /> Гарантия</button>
-                <button className="custom-button"><FaGlassWhiskey /> Поставщикам</button>
-                <button className="custom-button"><FaLock /> Безопасность</button>
+                {services.map((service, index) => (
+                    <button key={index} className="custom-button">
+                        {service.icon} {service.label}
+                    </button>
+                ))}
             </div>
 
             {/* Добавляем ProductSection ниже */}
