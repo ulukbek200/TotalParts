@@ -261,3 +261,47 @@ button:hover {
     width: 100%;
     height: auto;
 }
+
+/* Admin.css */
+.admin-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container input, 
+.admin-container select, 
+.admin-container button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-container button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.admin-container button:hover {
+    background-color: #45a049;
+}
+
+.admin-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.admin-container p {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
