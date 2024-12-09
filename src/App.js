@@ -9,6 +9,7 @@ import CartPage from './pages/CartPage';
 import CatalogPage from './pages/CatalogPage';
 import CategoryPage from './pages/CategoryPage';
 import ProductDetails from './pages/ProductDetails';
+import RecommendedPage from './pages/RecommendedPage';
 
 const App = () => {
     const loadProducts = () => {
@@ -115,6 +116,10 @@ const App = () => {
                     <Route
                         path="/product/:productId"
                         element={<ProductDetails products={products} />}
+                    />
+                    <Route
+                        path="/recommended"
+                        element={<RecommendedPage products={recommendedProducts} />}
                     />
                 </Routes>
             </main>
