@@ -1,34 +1,33 @@
 import React from 'react';
 
 const CartPage = ({ cart, total, updateCartQuantity, removeFromCart }) => {
-  return (
-    <div>
-      <h1>Корзина</h1>
-      {cart.length === 0 ? (
-        <p>Ваша корзина пуста.</p>
-      ) : (
+    return (
         <div>
-          {cart.map((product) => (
-            <div key={product.id} className="cart-item">
-              <img src={product.image} alt={product.title} />
-              <p>{product.title}</p>
-              <p>{product.price} сом</p>
-              <input
-                type="number"
-                value={product.quantity}
-                min="1"
-                onChange={(e) =>
-                  updateCartQuantity(product.id, Number(e.target.value))
-                }
-              />
-              <button onClick={() => removeFromCart(product.id)}>Удалить</button>
-            </div>
-          ))}
-          <p>Итого: {total} сом</p>
+            <h2>Корзина</h2>
+            {cart.length === 0 ? (
+                <p>Корзина пуста</p>
+            ) : (
+                <div>
+                    <ul>
+                        {cart.map((item) => (
+                            <li key={item.id}>
+                                {item.name} - {item.price} сом
+                                <input
+                                    type="number"
+                                    value={item.quantity}
+                                    onChange={(e) =>
+                                        updateCartQuantity(item.id, parseInt(e.target.value))
+                                    }
+                                />
+                                <button onClick={() => removeFromCart(item.id)}>Удалить</button>
+                            </li>
+                        ))}
+                    </ul>
+                    <h3>Общая стоимость: {total} сом</h3>
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
 
 export default CartPage;

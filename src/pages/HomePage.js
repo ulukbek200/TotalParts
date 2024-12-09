@@ -116,17 +116,16 @@ const HomePage = ({ addToCart, onAddProduct }) => {
             <div className="address-container">
                 <h3>Наш Адрес</h3>
                 <p>г. Бишкек Салымбеков Университет</p>
-                            <div className="map-container">
-                            <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d582.0758537815316!2d74.60009076350774!3d42.84427180784137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec987f324329b%3A0x2cd99bcd0df5fc1f!2z0KHQsNC70YvQvNCx0LXQutC-0LIg0KPQvdC40LLQtdGA0YHQuNGC0LXRgg!5e0!3m2!1sru!2skg!4v1733739200729!5m2!1sru!2skg"
-    width="100%"  // Устанавливаем ширину карты на 100%
-    height="450"
-    style={{ border: '0' }}  // Правильный объект с ключом и значением для стилей
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-/>
-
+                <div className="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d582.0758537815316!2d74.60009076350774!3d42.84427180784137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec987f324329b%3A0x2cd99bcd0df5fc1f!2z0KHQsNC70YvQvNCx0LXQutC-0LIg0KPQvdC40LLQtdGA0YHQuNGC0LXRgg!5e0!3m2!1sru!2skg!4v1733739200729!5m2!1sru!2skg"
+                        width="100%"  // Устанавливаем ширину карты на 100%
+                        height="450"
+                        style={{ border: '0' }}  // Правильный объект с ключом и значением для стилей
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                    />
                 </div>
             </div>
         </div>

@@ -124,3 +124,17 @@
   background-color: #8d6e3d;
 }
   
+/* Стиль кнопки добавления в корзину */
+.add-to-cart-btn {
+  background-color: #A98604;  /* Цвет кнопки */
+  color: white;  /* Текст белого цвета */
+  padding: 10px 20px;  /* Отступы */
+  border: none;  /* Без границ */
+  border-radius: 5px;  /* Закругленные углы */
+  cursor: pointer;  /* Курсор в виде руки */
+  transition: background-color 0.3s;  /* Плавный переход */
+}
+
+.add-to-cart-btn:hover {
+  background-color: #f0a500;  /* Цвет при наведении */
+}

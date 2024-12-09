@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import Admin from './pages/Admin';
+import Admin from './pages/Admin'; // Админ панель
+import AdminLogin from './pages/AdminLogin'; // Страница ввода пароля
 import CartPage from './pages/CartPage';
 import CatalogPage from './pages/CatalogPage';
 import CategoryPage from './pages/CategoryPage';
@@ -12,11 +13,13 @@ import ProductDetails from './pages/ProductDetails';
 import RecommendedPage from './pages/RecommendedPage';
 
 const App = () => {
+    // Загрузка сохранённых продуктов
     const loadProducts = () => {
         const savedProducts = localStorage.getItem('products');
         return savedProducts ? JSON.parse(savedProducts) : [];
     };
 
+    // Загрузка сохранённой корзины
     const loadCart = () => {
         const savedCart = localStorage.getItem('cart');
         return savedCart ? JSON.parse(savedCart) : [];
@@ -25,6 +28,7 @@ const App = () => {
     const [products, setProducts] = useState(loadProducts);
     const [cart, setCart] = useState(loadCart);
 
+    // Фильтрация продуктов по категориям
     const recommendedProducts = products.filter(
         (product) => product.category === 'Рекомендуемые'
     );
@@ -33,10 +37,12 @@ const App = () => {
         (product) => product.category === 'Топ продаж'
     );
 
+    // Сохранение продуктов в localStorage
     useEffect(() => {
         localStorage.setItem('products', JSON.stringify(products));
     }, [products]);
 
+    // Сохранение корзины в localStorage
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart]);
@@ -45,6 +51,7 @@ const App = () => {
         setProducts((prevProducts) => [...prevProducts, product]);
     };
 
+    // Добавление товара в корзину
     const addToCart = (product) => {
         const existingProduct = cart.find((item) => item.id === product.id);
         if (existingProduct) {
@@ -60,6 +67,7 @@ const App = () => {
         }
     };
 
+    // Обновление количества товара в корзине
     const updateCartQuantity = (productId, quantity) => {
         setCart((prevCart) =>
             prevCart.map((item) =>
@@ -68,13 +76,18 @@ const App = () => {
         );
     };
 
+    // Удаление товара из корзины
     const removeFromCart = (productId) => {
         setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
     };
 
+    // Подсчёт общей стоимости корзины
     const calculateTotal = () => {
         return cart.reduce((total, item) => total + item.price * item.quantity, 0);
     };
+
+    // Проверка, авторизован ли пользователь
+    const isAdminAuthenticated = localStorage.getItem('isAdminAuthenticated') === 'true';
 
     return (
         <Router>
@@ -93,9 +106,18 @@ const App = () => {
                         }
                     />
                     <Route path="/about" element={<AboutPage />} />
+                    {/* Страница ввода пароля */}
+                    <Route path="/admin-login" element={<AdminLogin />} />
+                    {/* Админ панель */}
                     <Route
                         path="/admin"
-                        element={<Admin onAddProduct={handleAddProduct} />}
+                        element={
+                            isAdminAuthenticated ? (
+                                <Admin onAddProduct={handleAddProduct} />
+                            ) : (
+                                <Navigate to="/admin-login" />
+                            )
+                        }
                     />
                     <Route
                         path="/cart"

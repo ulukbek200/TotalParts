@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
-import Admin from '../pages/Admin';
+import Admin from './Admin';  // Компонент админ-панели
+import AdminLogin from './AdminLogin';  // Компонент авторизации
 
 const AdminPage = () => {
-    const [recommendedProducts, setRecommendedProducts] = useState([]);
-    const [topSellingProducts, setTopSellingProducts] = useState([]);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-    const handleAddProduct = (newProduct) => {
-        if (newProduct.category === 'Рекомендуемые') {
-            setRecommendedProducts((prev) => [...prev, newProduct]);
-        } else if (newProduct.category === 'Топ продаж') {
-            setTopSellingProducts((prev) => [...prev, newProduct]);
-        } else {
-            alert('Категория должна быть "Рекомендуемые" или "Топ продаж"');
-        }
+    const handleLogin = (isLoggedIn) => {
+        setIsAuthenticated(isLoggedIn);
     };
 
     return (
         <div>
-            <h1>Админ-панель</h1>
-            <Admin onAddProduct={handleAddProduct} />
+            {!isAuthenticated ? (
+                <AdminLogin onLogin={handleLogin} />
+            ) : (
+                <Admin onAddProduct={(newProduct) => console.log(newProduct)} isAuthenticated={isAuthenticated} />
+            )}
         </div>
     );
 };
