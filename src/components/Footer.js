@@ -1,4 +1,3 @@
-// src/components/Footer.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
@@ -7,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Первая колонка */}
+        {/* Колонки футера */}
         <div className="footer-column">
           <h4>Меню компании</h4>
           <ul>
@@ -16,11 +15,10 @@ const Footer = () => {
             <li><Link to="/careers">Вакансии</Link></li>
             <li><Link to="/suppliers">Поставщикам</Link></li>
             <li><Link to="/contact">Контакты</Link></li>
-            <li>Кыргызстан - Бишкек</li> {/* Нет необходимости в ссылке */}
+            <li>Кыргызстан - Бишкек</li>
           </ul>
         </div>
-
-        {/* Вторая колонка */}
+        {/* Другие колонки */}
         <div className="footer-column">
           <h4>Каталоги</h4>
           <ul>
@@ -29,8 +27,6 @@ const Footer = () => {
             <li><Link to="/sale">Распродажа</Link></li>
           </ul>
         </div>
-
-        {/* Третья колонка */}
         <div className="footer-column">
           <h4>Помощь</h4>
           <ul>
@@ -40,8 +36,6 @@ const Footer = () => {
             <li><Link to="/forgot-password">Забыл пароль</Link></li>
           </ul>
         </div>
-
-        {/* Четвёртая колонка */}
         <div className="footer-column">
           <h4>Товары и бренды</h4>
           <ul>
@@ -50,6 +44,13 @@ const Footer = () => {
             <li><Link to="/stock-availability">Наличие на складах</Link></li>
           </ul>
         </div>
+      </div>
+
+      {/* Кнопка для перехода на страницу разработчиков */}
+      <div className="developers-link">
+        <Link to="/developers" className="developer-button">
+          Наши разработчики
+        </Link>
       </div>
 
       {/* Нижняя часть футера */}
