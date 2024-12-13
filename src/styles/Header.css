@@ -3,6 +3,17 @@
   background-color: white; /* Белый фон */
   padding: 15px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для отделения */
+  position: sticky; /* Сделать хедер липким */
+  top: 0; /* Привязать к верху страницы */
+  z-index: 1000; /* Убедитесь, что хедер поверх другого контента */
+  transition: padding 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Плавные анимации */
+}
+
+/* Когда хедер становится липким */
+.header.sticky {
+  padding: 10px 30px; /* Уменьшение отступов */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Усиленная тень */
+  transform: translateY(-10px); /* Легкий сдвиг вверх для плавного эффекта */
 }
 
 /* Контейнер для контента хедера */
@@ -142,40 +153,6 @@
 .social-links {
   display: flex;
   gap: 15px;
-}
-
-.social-link {
-  color: #A98604;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-.social-link:hover {
-  color: #1dbf73; /* Цвет при наведении */
-}
-
-/* Отступы для нижней панели */
-.bottom-bar {
-  padding-top: 15px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-
-
-
-/* Верхняя панель с информацией */
-.top-bar {
-  display: flex;
-  align-items: center;
-  gap: 140px; /* Устанавливаем отступ между элементами */
-}
-
-/* Социальные ссылки */
-.social-links {
-  display: flex;
-  gap: 15px;
   margin-left: auto; /* Сдвигает на правую сторону */
 }
 
@@ -189,37 +166,10 @@
   color: #1dbf73; /* Цвет при наведении */
 }
 
-
-/* Социальные ссылки */
-.social-links {
-  display: flex;
-  gap: 20px; /* Увеличен отступ между иконками */
-  margin-left: auto; /* Сдвигает на правую сторону */
-}
-
-.social-link {
-  color: #A98604;
-  font-size: 30px; /* Увеличен размер иконок */
-  transition: color 0.3s ease;
-}
-
-.social-link:hover {
-  color: #1dbf73; /* Цвет при наведении */
-}
-
-/* 
-  .top-bar{
-    display: flex;
-    margin-right: 100px
-  } */
-  /* Контейнер для локации и часов */
+/* Контейнер для локации и часов */
 .location, .hours {
   display: flex;
   align-items: center;
   gap: 10px; /* Расстояние между иконкой и текстом */
   margin-left: 60px; /* Добавлен отступ слева для сдвига вправо */
 }
-
-/* .icon {
-  font-size: 18px; /* Размер иконок */
-

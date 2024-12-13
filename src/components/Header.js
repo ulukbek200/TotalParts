@@ -1,15 +1,34 @@
-// src/components/Header.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import '../styles/Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'; // Объединение импортов для faWhatsapp и faInstagram
+import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Header = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  // Обработчик для скроллинга
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    
+    // Убираем обработчик при размонтировании компонента
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${isSticky ? 'sticky' : ''}`}>
       <div className="top-bar">
         <div className="location">
           <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
