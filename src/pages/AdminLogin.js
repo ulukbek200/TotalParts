@@ -4,25 +4,29 @@ import { useNavigate } from 'react-router-dom';
 const AdminLogin = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const correctPassword = 'yourPassword'; // Убедитесь, что это правильный пароль
 
     const handleLogin = () => {
-        const correctPassword = 'Ulukbek'; // Замените на ваш пароль
+        console.log('Attempting login with password:', password); // Лог для отладки
         if (password === correctPassword) {
-            localStorage.setItem('isAdminAuthenticated', 'true'); // Устанавливаем флаг
-            navigate('/admin'); // Перенаправляем в админ-панель
+            // Сохраняем информацию об авторизации
+            localStorage.setItem('isAuthenticated', 'true');
+            console.log('Login successful, redirecting to /admin');
+            navigate('/admin'); // Перенаправление на страницу администратора
         } else {
-            alert('Неверный пароль!');
+            console.log('Incorrect password'); // Лог для отладки
+            alert('Неверный пароль');
         }
     };
 
     return (
         <div>
-            <h2>Авторизация Админа</h2>
+            <h2>Админ Логин</h2>
             <input
                 type="password"
+                placeholder="Введите пароль"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Введите пароль"
             />
             <button onClick={handleLogin}>Войти</button>
         </div>

@@ -1,11 +1,16 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const CategoryPage = ({ products }) => {
+const CategoryPage = ({ products = [] }) => {
     const { category } = useParams();
-    
-    // Фильтруем продукты по категории
-    const filteredProducts = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
+
+    // Проверяем, что products — это массив
+    const filteredProducts = products
+        ? products.filter(
+            (product) =>
+                product.category?.toLowerCase() === category?.toLowerCase()
+        )
+        : [];
 
     return (
         <div>

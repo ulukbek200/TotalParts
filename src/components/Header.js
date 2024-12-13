@@ -22,13 +22,13 @@ const Header = () => {
           <FontAwesomeIcon icon={faClock} />
           <span>MON - SAT: 10:00 AM - 20:00 PM</span>
         </div>
-        <div className="cart">
+        {/* <div className="cart">
           <Link to="/cart">
             <FontAwesomeIcon icon={faShoppingCart} />
             <span>Корзина</span>
             <span className="cart-count">5</span>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className="header-content">

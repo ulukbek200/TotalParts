@@ -8,22 +8,17 @@ const Admin = ({ onAddProduct }) => {
     const [imageUrl, setImageUrl] = useState('');
     const [productPrice, setProductPrice] = useState('');
     const [productAvailable, setProductAvailable] = useState(true);
-    const [formErrors, setFormErrors] = useState({
-        productName: '',
-        productCategory: '',
-        productPrice: '',
-        imageUrl: '',
-    });
+    const [formErrors, setFormErrors] = useState({});
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
 
-    const correctPassword = 'admin123'; // Правильный пароль
+    const correctPassword = 'yourSawed'; // Правильный пароль
 
     const handleLogin = () => {
         if (password === correctPassword) {
-            setErrorMessage(''); // очищаем ошибку, если пароль правильный
-            setPassword(''); // очищаем поле пароля
+            setErrorMessage('');
+            setPassword('');
         } else {
             setErrorMessage('Неверный пароль');
         }
@@ -37,7 +32,6 @@ const Admin = ({ onAddProduct }) => {
             imageUrl: '',
         };
 
-        // Валидация полей
         if (!productName) {
             errors.productName = 'Название не может быть пустым';
         }
@@ -57,7 +51,7 @@ const Admin = ({ onAddProduct }) => {
         }
 
         const newProduct = {
-            id: Date.now(),
+            id: Date.now(), // Уникальный идентификатор для нового продукта
             name: productName,
             category: productCategory,
             description: productDescription,
@@ -66,7 +60,7 @@ const Admin = ({ onAddProduct }) => {
             available: productAvailable,
         };
 
-        onAddProduct(newProduct); // Вызываем переданную функцию для добавления продукта
+        onAddProduct(newProduct); // Добавляем новый продукт
 
         // Очистка полей и сообщений
         setProductName('');
@@ -82,7 +76,6 @@ const Admin = ({ onAddProduct }) => {
         setTimeout(() => setSuccessMessage(''), 3000);
     };
 
-    // Если пароль правильный, показываем админ-панель
     if (errorMessage === '') {
         return (
             <div className="admin-container">
@@ -143,7 +136,6 @@ const Admin = ({ onAddProduct }) => {
         );
     }
 
-    // Если пароль неверный, показываем форму для ввода пароля
     return (
         <div className="login-container">
             <h2>Введите пароль для доступа</h2>
