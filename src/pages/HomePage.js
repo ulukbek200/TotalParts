@@ -56,18 +56,15 @@ const HomePage = ({ addToCart, onAddProduct }) => {
             <Carousel className="custom-carousel">
                 <Carousel.Item>
                     <img className="d-block w-100" src={image1} alt="Первый слайд" />
-                    <Carousel.Caption>
-                        <h3>Первый слайд</h3>
-                        <p>Описание первого слайда.</p>
-                    </Carousel.Caption>
+                   
                 </Carousel.Item>
 
                 <Carousel.Item>
                     <img className="d-block w-100" src={image2} alt="Второй слайд" />
-                    <Carousel.Caption>
+                    {/* <Carousel.Caption>
                         <h3>Второй слайд</h3>
                         <p>Описание второго слайда.</p>
-                    </Carousel.Caption>
+                    </Carousel.Caption> */}
                 </Carousel.Item>
             </Carousel>
 

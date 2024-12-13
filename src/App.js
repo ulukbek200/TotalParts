@@ -15,7 +15,10 @@ import DevelopersPage from './pages/DevelopersPage';
 
 const AppContent = () => {
     const location = useLocation();
-    const hideHeaderFooter = location.pathname === '/developers';
+
+    // Пути, где нужно скрывать хедер и футер
+    const hideHeaderFooterPaths = ['/developers', '/admin', '/admin-login'];
+    const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname);
 
     // Состояние авторизации
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -32,7 +35,6 @@ const AppContent = () => {
     useEffect(() => {
         // Проверка из localStorage на успешную авторизацию
         const userAuthStatus = localStorage.getItem('isAuthenticated') === 'true';
-        console.log('Authentication status:', userAuthStatus); // Лог для отладки
         setIsAuthenticated(userAuthStatus);
     }, []);
 
@@ -40,14 +42,12 @@ const AppContent = () => {
         // Обновление состояния авторизации и сохранение в localStorage
         setIsAuthenticated(true);
         localStorage.setItem('isAuthenticated', 'true');
-        console.log('User logged in'); // Лог для отладки
     };
 
     const handleLogout = () => {
         // Логаут пользователя, удаление из localStorage
         setIsAuthenticated(false);
         localStorage.setItem('isAuthenticated', 'false');
-        console.log('User logged out'); // Лог для отладки
     };
 
     // Функция для добавления продукта

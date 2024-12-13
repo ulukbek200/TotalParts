@@ -264,9 +264,12 @@ button:hover {
 
 /* Admin.css */
 .admin-container {
+
+    
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #fff8e1;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -305,4 +308,57 @@ button:hover {
     font-size: 14px;
     text-align: center;
 }
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Занимает всю высоту экрана */
+     /* Задайте фоновый цвет, если нужно */
+    background-color: #fff8e1
+}
+
+.admin-logo {
+    width: 150px; /* Ширина логотипа */
+    margin-bottom: 20px; /* Отступ от панели */
+}
+
+.admin-panel {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; /* Ограничение по ширине */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.admin-container, .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    background-color: #fff8e1
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
 

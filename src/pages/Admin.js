@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Admin.css';
+import Logo23 from '../images/logo23.jpg'; // Use the imported logo here
 
 const Admin = ({ onAddProduct }) => {
     const [productName, setProductName] = useState('');
@@ -9,20 +10,7 @@ const Admin = ({ onAddProduct }) => {
     const [productPrice, setProductPrice] = useState('');
     const [productAvailable, setProductAvailable] = useState(true);
     const [formErrors, setFormErrors] = useState({});
-    const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
-
-    const correctPassword = 'yourSawed'; // Правильный пароль
-
-    const handleLogin = () => {
-        if (password === correctPassword) {
-            setErrorMessage('');
-            setPassword('');
-        } else {
-            setErrorMessage('Неверный пароль');
-        }
-    };
 
     const handleAddProduct = () => {
         const errors = {
@@ -51,7 +39,7 @@ const Admin = ({ onAddProduct }) => {
         }
 
         const newProduct = {
-            id: Date.now(), // Уникальный идентификатор для нового продукта
+            id: Date.now(),
             name: productName,
             category: productCategory,
             description: productDescription,
@@ -60,9 +48,8 @@ const Admin = ({ onAddProduct }) => {
             available: productAvailable,
         };
 
-        onAddProduct(newProduct); // Добавляем новый продукт
+        onAddProduct(newProduct);
 
-        // Очистка полей и сообщений
         setProductName('');
         setProductCategory('');
         setProductDescription('');
@@ -72,13 +59,15 @@ const Admin = ({ onAddProduct }) => {
         setFormErrors({});
         setSuccessMessage('Продукт добавлен успешно!');
 
-        // Убираем сообщение через 3 секунды
         setTimeout(() => setSuccessMessage(''), 3000);
     };
 
-    if (errorMessage === '') {
-        return (
-            <div className="admin-container">
+    return (
+        <div className="admin-container">
+            <div className="logo-container">
+                <img src={Logo23} alt="Company Logo" className="logo" /> {/* Use Logo23 here */}
+            </div>
+            <div className="admin-panel">
                 <h1>Админ Панель</h1>
                 {successMessage && <p className="success">{successMessage}</p>}
                 <input
@@ -97,18 +86,6 @@ const Admin = ({ onAddProduct }) => {
                     <option value="Топ продаж">Топ продаж</option>
                     <option value="Аккумуляторы">Аккумуляторы</option>
                     <option value="Лампочки">Лампочки</option>
-                    <option value="Радиаторы">Радиаторы</option>
-                    <option value="Глушители">Глушители</option>
-                    <option value="Бамперы">Бамперы</option>
-                    <option value="Сцепление">Сцепление</option>
-                    <option value="Амортизаторы">Амортизаторы</option>
-                    <option value="Тормоза">Тормоза</option>
-                    <option value="Подвеска">Подвеска</option>
-                    <option value="Электрика">Электрика</option>
-                    <option value="Шины">Шины</option>
-                    <option value="Диски">Диски</option>
-                    <option value="Фильтры">Фильтры</option>
-                    <option value="Масла">Масла</option>
                 </select>
                 {formErrors.productCategory && <p className="error">{formErrors.productCategory}</p>}
                 <input
@@ -133,20 +110,6 @@ const Admin = ({ onAddProduct }) => {
                 {formErrors.productPrice && <p className="error">{formErrors.productPrice}</p>}
                 <button onClick={handleAddProduct}>Добавить продукт</button>
             </div>
-        );
-    }
-
-    return (
-        <div className="login-container">
-            <h2>Введите пароль для доступа</h2>
-            <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Пароль"
-            />
-            <button onClick={handleLogin}>Войти</button>
-            {errorMessage && <p className="error">{errorMessage}</p>}
         </div>
     );
 };

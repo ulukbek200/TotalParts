@@ -4,36 +4,46 @@ import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import '../styles/Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faMapMarkerAlt, faPhone, faClock, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'; // Объединение импортов для faWhatsapp и faInstagram
 
 const Header = () => {
   return (
     <header className="header">
       <div className="top-bar">
         <div className="location">
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
+          <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
           <span>Кыргызстан - Бишкек</span>
         </div>
-        <div className="phone">
-          <FontAwesomeIcon icon={faPhone} />
-          <span>+996 990 909 109</span>
-        </div>
         <div className="hours">
-          <FontAwesomeIcon icon={faClock} />
+          <FontAwesomeIcon icon={faClock} className="icon" />
           <span>MON - SAT: 10:00 AM - 20:00 PM</span>
         </div>
-        {/* <div className="cart">
-          <Link to="/cart">
-            <FontAwesomeIcon icon={faShoppingCart} />
-            <span>Корзина</span>
-            <span className="cart-count">5</span>
-          </Link>
-        </div> */}
+        <div className="social-links">
+          <a 
+            href="https://wa.me/996990909109" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-link"
+          >
+            <FontAwesomeIcon icon={faWhatsapp} className="icon" />
+          </a>
+          <a 
+            href="https://www.instagram.com/2702ooll" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-link"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="icon" />
+          </a>
+        </div>
       </div>
 
       <div className="header-content">
         <div className="logo-section">
-          <img src={logo} alt="Логотип" className="logo-image" />
+          <Link to="/">
+            <img src={logo} alt="Логотип" className="logo-image" />
+          </Link>
           <h5 className="site-name"><strong>Total</strong>Parts.kg</h5>
         </div>
         <div className="search-bar">
@@ -43,9 +53,9 @@ const Header = () => {
           </button>
         </div>
         <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About us</Link>
-          <Link to="/catalog">Catalog</Link>
+          <Link to="/">Главная</Link>
+          <Link to="/about">О нас</Link>
+          <Link to="/catalog">Каталог</Link>
         </nav>
       </div>
     </header>

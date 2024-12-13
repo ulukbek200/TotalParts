@@ -1,156 +1,225 @@
 /* Основные стили для хедера */
 .header {
-    background-color: white; /* Белый фон */
-    padding: 15px 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для отделения */
-  }
-  
-  /* .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } */
+  background-color: white; /* Белый фон */
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для отделения */
+}
 
-  /* styles/Header.css */
+/* Контейнер для контента хедера */
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px;
   margin-top: 5px; /* Отступ сверху для опускания блока */
-  /* другие стили */
 }
 
-  
-  .logo-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .site-name {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #A98604;
-  }
-  
-  /* Контейнер для контактной информации и корзины */
-  .contact-and-cart {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Расстояние между контактами и корзиной */
-  }
-  
-  .contact-info {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Расстояние между элементами внутри контактной информации */
-    font-size: 0.9em;
-    color: #A98604;
-  }
-  /* top-bar */
-  .contact-info svg {
-    margin-right: 5px;
-  }
-  
-  /* Поисковая строка */
-  .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #f3f3f3;
-    border-radius: 20px;
-    padding: 8px;
-    width: 400px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .search-input {
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 5px 10px;
-    color: #333;
-  }
-  
-  .search-button {
-    background-color: #A98604;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  /* Навигация */
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-top: 1px solid #eee;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #A98604;
-  }
-  
-  .nav-links a:hover {
-    color: #333; /* Цвет при наведении */
-  }
-  
-  /* Кнопка корзины */
-  .cart {
-    background-color: #A98604;
-    padding: 8px 15px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .cart svg {
-    margin-right: 5px;
-    color: white; /* Устанавливает белый цвет для иконки */
-  }
-  
-  .cart .cart-count {
-    background-color: white;
-    color: #A98604;
-    border-radius: 50%;
-    padding: 3px 8px;
-    margin-left: 8px;
-    font-weight: bold;
-  }
-  
+/* Логотип и название сайта */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
 
+.logo-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
 
-  .top-bar {
-    display: flex; /* Используем flex-контейнер */
-    align-items: center; /* Центрируем элементы по вертикали */
-    gap: 140px; /* Устанавливаем отступ между элементами */
+.site-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #A98604;
+}
+
+/* Контейнер для контактной информации и корзины */
+.contact-and-cart {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Расстояние между контактами и корзиной */
+}
+
+/* Контактная информация */
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Расстояние между элементами внутри контактной информации */
+  font-size: 0.9em;
+  color: #A98604;
+}
+
+.contact-info svg {
+  margin-right: 5px;
+}
+
+/* Поисковая строка */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  padding: 8px;
+  width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 5px 10px;
+  color: #333;
+}
+
+.search-button {
+  background-color: #A98604;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Навигация */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #A98604;
+}
+
+.nav-links a:hover {
+  color: #333; /* Цвет при наведении */
+}
+
+/* Кнопка корзины */
+.cart {
+  background-color: #A98604;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.cart svg {
+  margin-right: 5px;
+  color: white; /* Устанавливает белый цвет для иконки */
+}
+
+.cart .cart-count {
+  background-color: white;
+  color: #A98604;
+  border-radius: 50%;
+  padding: 3px 8px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/* Верхняя панель с информацией */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 140px; /* Устанавливаем отступ между элементами */
+}
+
+/* Социальные ссылки */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: #A98604;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #1dbf73; /* Цвет при наведении */
+}
+
+/* Отступы для нижней панели */
+.bottom-bar {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 
 
 
+/* Верхняя панель с информацией */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 140px; /* Устанавливаем отступ между элементами */
+}
+
+/* Социальные ссылки */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-left: auto; /* Сдвигает на правую сторону */
+}
+
+.social-link {
+  color: #A98604;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #1dbf73; /* Цвет при наведении */
+}
+
+
+/* Социальные ссылки */
+.social-links {
+  display: flex;
+  gap: 20px; /* Увеличен отступ между иконками */
+  margin-left: auto; /* Сдвигает на правую сторону */
+}
+
+.social-link {
+  color: #A98604;
+  font-size: 30px; /* Увеличен размер иконок */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #1dbf73; /* Цвет при наведении */
+}
 
 /* 
   .top-bar{
     display: flex;
     margin-right: 100px
   } */
+  /* Контейнер для локации и часов */
+.location, .hours {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Расстояние между иконкой и текстом */
+  margin-left: 60px; /* Добавлен отступ слева для сдвига вправо */
+}
+
+/* .icon {
+  font-size: 18px; /* Размер иконок */
+
