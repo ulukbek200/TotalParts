@@ -1,75 +1,7 @@
-/* AdminLogin.css */
-
 /* Center the entire login page */
 .login-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4; /* Light background */
-}
-
-.logo-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.logo {
-    width: 150px; /* Adjust size of logo */
-    height: auto;
-}
-
-/* Style the login form */
-.login-form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px; /* Maximum width for the form */
-    text-align: center;
-}
-
-.login-form h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
-
-.login-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-.login-form input:focus {
-    outline: none;
-    border-color: #4CAF50; /* Green border on focus */
-}
-
-.login-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4CAF50; /* Green button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.login-form button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-/* AdminLogin.css */
-
-/* Center the entire login page */
-.login-container {
-    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание элементов */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -78,11 +10,11 @@
 
 .logo-container {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Уменьшен отступ для более компактного расположения */
 }
 
 .logo {
-    width: 150px; /* Adjust size of logo */
+    width: 120px; /* Размер лого немного уменьшен */
     height: auto;
 }
 
@@ -130,4 +62,62 @@
 
 .login-form button:hover {
     background-color: #45a049; /* Darker green on hover */
+}
+
+/* Для устройств с шириной экрана менее 768px (планшеты и телефоны) */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px; /* Увеличение внутреннего отступа для улучшения читаемости */
+    }
+
+    .login-form {
+        padding: 20px;
+        max-width: 100%; /* Форма занимает всю ширину */
+        box-shadow: none; /* Убираем тень для более минималистичного вида */
+    }
+
+    .login-form h2 {
+        font-size: 20px; /* Уменьшаем размер заголовка */
+    }
+
+    .login-form input, .login-form button {
+        font-size: 14px; /* Уменьшаем размер шрифта для кнопок и полей */
+        padding: 8px; /* Уменьшаем внутренний отступ */
+    }
+
+    .logo {
+        width: 100px; /* Уменьшаем размер логотипа */
+    }
+}
+
+/* Для устройств с шириной экрана менее 480px (мобильные телефоны) */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px; /* Ещё меньше отступов для компактности */
+    }
+
+    .login-form {
+        padding: 15px; /* Компактная форма */
+    }
+
+    .login-form h2 {
+        font-size: 18px; /* Ещё меньше заголовок */
+    }
+
+    .login-form input, .login-form button {
+        font-size: 12px; /* Ещё меньше шрифт */
+        padding: 6px; /* Уменьшаем внутренний отступ */
+    }
+
+    .logo {
+        width: 80px; /* Ещё меньше логотип */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Стили для планшетов */
+}
+
+@media (max-width: 480px) {
+    /* Стили для мобильных телефонов */
 }

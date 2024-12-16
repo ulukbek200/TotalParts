@@ -201,3 +201,74 @@ h2 {
     background-color: #e6e6e6;
     color: #A98604; /* Выделение при наведении */
 }
+
+
+@media (max-width: 1024px) {
+    .category-item, .manufacturer-item {
+        padding: 12px; /* Уменьшаем отступы */
+    }
+
+    .category-grid, .manufacturer-grid {
+        gap: 12px;
+    }
+
+    .search-container {
+        max-width: 300px; /* Уменьшаем ширину поля поиска */
+    }
+
+    .manufacturer-item {
+        width: 180px; /* Сужаем ширину карточек производителей */
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .catalog-page {
+        padding: 15px;
+    }
+
+    .category-item, .manufacturer-item {
+        padding: 10px; /* Уменьшаем отступы для мобильных */
+    }
+
+    .category-grid, .manufacturer-grid {
+        gap: 8px;
+    }
+
+    .search-container {
+        max-width: 250px;
+        margin: 10px auto;
+    }
+
+    .manufacturer-item {
+        width: 150px; /* Еще больше уменьшаем ширину для мобильных */
+    }
+
+    .category-item {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+}
+
+/* Для маленьких экранов */
+@media (max-width: 480px) {
+    .category-item, .manufacturer-item {
+        padding: 8px; /* Минимальные отступы для маленьких экранов */
+    }
+
+    .search-container {
+        max-width: 220px;
+        margin: 10px auto;
+    }
+
+    .manufacturer-item {
+        width: 130px; /* Уменьшаем ширину карточек производителей */
+    }
+
+    .category-item {
+        font-size: 12px; /* Еще меньше размер шрифта */
+    }
+
+    .search-input::placeholder {
+        font-size: 12px;
+    }
+}

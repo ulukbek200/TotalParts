@@ -120,3 +120,109 @@
     border: none;
     cursor: pointer;
 }
+@media (max-width: 1024px) {
+    .cart-page {
+        padding: 15px;
+    }
+
+    .cart-item {
+        flex-direction: column; /* Смена направления на вертикальное для более компактного отображения */
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .item-image {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .item-details h3 {
+        font-size: 1em; /* Уменьшаем размер заголовка */
+    }
+
+    .quantity-control {
+        margin-top: 10px;
+    }
+
+    .checkout-button {
+        width: 100%; /* Сделать кнопку на всю ширину */
+        padding: 12px 20px;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .cart-page {
+        padding: 10px;
+    }
+
+    .cart-items {
+        gap: 10px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .cart-item {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .item-details h3 {
+        font-size: 0.9em; /* Уменьшаем размер заголовка */
+    }
+
+    .quantity-control {
+        margin-top: 10px;
+    }
+
+    .checkout-button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    .cart-summary {
+        text-align: left; /* Сдвигаем подсумму влево */
+    }
+}
+
+/* Для очень маленьких экранов (например, смартфоны) */
+@media (max-width: 480px) {
+    .cart-page {
+        padding: 5px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .item-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item-details h3 {
+        font-size: 0.8em; /* Уменьшаем размер заголовка еще больше */
+    }
+
+    .quantity-control button {
+        padding: 5px 8px; /* Уменьшаем размер кнопок */
+    }
+
+    .checkout-button {
+        width: 100%;
+        font-size: 0.9em; /* Уменьшаем размер шрифта на кнопке */
+        padding: 12px 15px;
+    }
+
+    .cart-summary {
+        text-align: left;
+        font-size: 0.9em; /* Уменьшаем размер шрифта */
+    }
+}

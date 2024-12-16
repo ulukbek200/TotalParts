@@ -362,3 +362,89 @@ h1 {
 }
 
 
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 10px;
+        width: 90%;
+    }
+
+    .product-card, 
+    .new_title, 
+    .trOne, 
+    .tr, 
+    .hashtag_input {
+        width: 100%; /* Полная ширина */
+    }
+
+    .product-card {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .adminName {
+        font-size: 20px; /* Уменьшение размера */
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-container {
+        padding: 5px;
+    }
+
+    .adminName {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .product-card img {
+        max-width: 100px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+@media (max-width: 600px) {
+    h1, .adminName, .title_article {
+        font-size: 18px;
+    }
+
+    .num, .plus, .hashtag {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    button, input, select {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .button {
+        padding: 10px 15px;
+    }
+}
+@media (max-width: 768px) {
+    /* Стили для планшетов и небольших экранов */
+}
+
+@media (max-width: 480px) {
+    /* Стили для мобильных телефонов */
+}
+
+@media (max-width: 360px) {
+    /* Стили для очень маленьких экранов (дополнительно, если нужно) */
+}

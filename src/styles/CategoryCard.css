@@ -27,3 +27,51 @@
     cursor: pointer;
   }
   
+
+  @media (max-width: 1024px) {
+    .category-card {
+        width: 220px; /* Slightly smaller card width */
+        padding: 15px; /* Reducing padding */
+    }
+
+    .category-content h3 {
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    .category-button {
+        padding: 8px 12px; /* Smaller button */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .category-card {
+        width: 200px; /* Reduce card width further for small screens */
+        padding: 12px; /* Smaller padding */
+    }
+
+    .category-content h3 {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .category-button {
+        padding: 6px 10px; /* Smaller button padding */
+    }
+}
+
+/* For very small screens (e.g., phones in portrait mode) */
+@media (max-width: 480px) {
+    .category-card {
+        width: 180px; /* Even smaller card width */
+        padding: 10px; /* Minimal padding */
+    }
+
+    .category-content h3 {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .category-button {
+        font-size: 12px; /* Slightly smaller button text */
+        padding: 5px 8px; /* Smaller padding */
+    }
+}

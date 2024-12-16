@@ -51,18 +51,6 @@
 }
 
 
-/* 
-.category-card {
-  flex: 0 0 auto;
-  /* width: 20px; */
-  /* height: 25px; */
-  /* padding: 15px; */
-  /* background-color: #e0e0e0; */
-  /* border-radius: 8px; */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-/* } */ 
-
 .category-card:hover {
   transform: scale(1.05); /* Увеличение карточки при наведении */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -94,41 +82,6 @@
 .product-card {
   flex: 1 1 200px; /* Makes each card take up a minimum width of 200px */
   max-width: 200px; /* Ensures cards don't stretch too wide */
-}
-
-@media (min-width: 600px) {
-  .product-cards {
-    justify-content: start; /* Aligns items at the start on larger screens */
-  }
-}
-
-@media (max-width: 600px) {
-  .product-cards {
-    justify-content: center; /* Centers items for small screens */
-  }
-}
-.product-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start; /* Aligns cards to the start on larger screens */
-}
-
-.product-card {
-  flex: 1 1 250px; /* Minimum width for each card, adjusting for responsive layout */
-  max-width: 300px;
-  box-sizing: border-box;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .product-cards {
-    justify-content: center; /* Center cards on smaller screens */
-  }
-
-  .product-card {
-    flex: 1 1 100%; /* Take full width in a single column */
-  }
 }
 
 
@@ -225,4 +178,38 @@
 
 .product-card button:hover {
   background-color: #846302;
+}
+@media (min-width: 600px) {
+  .product-cards {
+    justify-content: start; /* Aligns items at the start on larger screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-cards {
+    justify-content: center; /* Centers items for small screens */
+  }
+}
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; /* Aligns cards to the start on larger screens */
+}
+
+.product-card {
+  flex: 1 1 250px; /* Minimum width for each card, adjusting for responsive layout */
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .product-cards {
+    justify-content: center; /* Center cards on smaller screens */
+  }
+
+  .product-card {
+    flex: 1 1 100%; /* Take full width in a single column */
+  }
 }
