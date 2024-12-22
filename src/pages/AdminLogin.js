@@ -8,7 +8,7 @@ const AdminLogin = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const correctUsername = 'admin'; // Correct username
-    const correctPassword = 'yourPassword'; // Correct password
+    const correctPassword = '123'; // Correct password
 
     const handleLogin = () => {
         console.log('Attempting login with username:', username, 'and password:', password); // Log for debugging

@@ -57,7 +57,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} />
         </button>
       </div>
-      <div className="top-bar">
+      {/* <div className="top-bar">
         <div className="location">
           <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
           <span>Кыргызстан - Бишкек</span>
@@ -84,7 +84,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faInstagram} className="icon" />
           </a>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 };
